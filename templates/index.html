@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="ProjectPiCars Server">
+  <meta name="author" content="MilleniumBlitz">
+  <title>Project Pi Cars</title>
+  <link rel="icon" type="image/png" href="/static/assets/img/favicon.png" />
+  <link rel="stylesheet" type="text/css" href="/static/assets/style/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/static/assets/style/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+
+<body>
+	<div class="container">
+		<div id="logo">
+			<img src="/static/assets/img/LogoTransparent.png"  class="img-responsive" alt="Responsive image">
+			<h1><p class="text-center">SERVEUR PROJECT PI CARS</p></h1>
+		</div>
+		<div id="infosServeur">
+			<div class="alert alert-info" role="alert"><p class="text-center">Informations sur le Raspberry Pi</p></div>
+			<table class="table">
+				<tr>
+					<td>Version du Raspberry Pi</td>
+					<td>{{ rpiversion }}</td>
+				</tr>
+				<tr>
+					<td>Utilisation du processeur</td>
+					<td>{{ cpuUsage }} %</td>
+				</tr>
+				<tr>
+					<td>Température du processeur</td>
+					<td>{{ cpuTemp }} °</td>
+				</tr>
+				
+			</table>
+		</div>
+	</div>
+  
+
+
+
+</body>
+</html>
