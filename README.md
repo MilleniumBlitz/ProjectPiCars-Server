@@ -9,13 +9,13 @@ Python server for ProjectPiCars : A Raspberry Pi powered RC Car
 
 ## Installation
 
-- ###Get Repo
+- ### Get Repo
 	```
 	git clone https://github.com/MilleniumBlitz/ProjectPiCars-Server
 	cd ProjectPiCars-Server
     ```
 
-- ###Launch
+- ### Launch
   ```
   sudo python ProjectPiCars_Server.py
   ```
