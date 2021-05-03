@@ -19,3 +19,15 @@ Python server for ProjectPiCars : A Raspberry Pi powered RC Car
   ```
   sudo python ProjectPiCars_Server.py
   ```
+
+## Launch at boot
+
+Edit the file :
+```
+sudo crontab -e
+```
+
+Add line to the file :
+```
+@reboot python3 /home/pi/ProjectPiCars-Server/ProjectPiCars_Server.py &
+```
