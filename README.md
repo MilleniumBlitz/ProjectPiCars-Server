@@ -29,5 +29,5 @@ sudo crontab -e
 
 Add line to the file :
 ```
-@reboot python3 /home/pi/ProjectPiCars-Server/ProjectPiCars_Server.py &
+@reboot python /home/pi/ProjectPiCars-Server/ProjectPiCars_Server.py &
 ```
