@@ -44,6 +44,17 @@ def power(duty):
     TB.SetMotor2(-float(duty) / 100)
     return "Changement puissance"
 
+def activate_failsafe():
+    print("activation fail safe")
+    # Disable all motors
+    TB.SetMotor1(0)
+    TB.SetMotor2(0)
+    # Enable failsafe led color
+    TB.SetLedShowBattery(False)
+    TB.SetLed1(255, 0, 0)
+
+thread1 = threading.Timer(3, function = activate_failsafe)
+
 @app.route("/failsafe")
 def update_fail_safe():
 
@@ -55,21 +66,15 @@ def update_fail_safe():
     thread1.start()
 
     #Enable the led to show the battery level
-    TB.SetLedShowBattery(enabled)
+    TB.SetLedShowBattery(True)
     
     return "failsafe updated"
 
-def activate_failsafe():
-    print("activation fail safe")
-    # Disable all motors
-    TB.SetMotor1(0)
-    TB.SetMotor2(0)
-    # Enable failsafe led color
-    TB.SetLed1(255, 0, 0)
+
     
     
 
-thread1 = threading.Timer(3, function = activate_failsafe)
+
 
 if __name__ == "__main__":
 	app.run(host= '0.0.0.0', port=80, debug=True)
